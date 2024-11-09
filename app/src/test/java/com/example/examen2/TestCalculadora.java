@@ -4,6 +4,8 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+
 public class TestCalculadora {
 
     //Prueba para el método convertirNumero con un caso de excepción.
@@ -52,5 +54,15 @@ public class TestCalculadora {
     @Test
     public void testConvertirADestino() {
         assertEquals("ff", Calculadora.convertirADestino(255, 3));
+    }
+
+    @Test
+    public void testEncuentra_elementoEnLista() {
+        assertTrue(Calculadora.Encuentra(Arrays.asList(100, 99, 98, 97, 96, 95), 99));
+    }
+
+    @Test
+    public void testEncuentra_elementoNoEnLista() {
+        assertFalse(Calculadora.Encuentra(Arrays.asList(1, 2, 3, 4, 5, 6), 0));
     }
 }
