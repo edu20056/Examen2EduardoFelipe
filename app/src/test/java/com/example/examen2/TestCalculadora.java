@@ -62,6 +62,5 @@ public class TestCalculadora {
     @Test
     public void testEncuentra_elementoNoEnLista() {
         assertFalse(Calculadora.Encuentra(Arrays.asList(1, 2, 3, 4, 7, 6, 0), 5));
-
     }
 }
